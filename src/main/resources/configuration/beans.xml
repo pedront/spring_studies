@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- Beans with singleton (default) scope are initialized together with the application context
+     -->
+    <bean id="singletonBean" class="br.net.pnt.configuration.SimpleBean" scope="singleton">
+        <property name="text" value="This is a singleton scoped bean!"/>
+    </bean>
+
+    <!-- Beans with prototype scope are initialized only when needed -->
+    <bean id="prototypeBean" class="br.net.pnt.configuration.SimpleBean" scope="prototype">
+        <property name="text" value="This is a prototype scoped bean!"/>
+    </bean>
+</beans>
